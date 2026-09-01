@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Notebook",
+      "price": 3500
+    },
+    {
+      "id": "2",
+      "name": "Mouse",
+      "price": 120
+    },
+    {
+      "id": "3",
+      "name": "Teclado",
+      "price": 250
+    },
+    {
+      "name": "teste",
+      "price": "123",
+      "id": "J4YhUxDFVMY"
+    },
+    {
+      "name": "Teclado Mecânico",
+      "price": "221",
+      "id": "su5ol_m3za4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
