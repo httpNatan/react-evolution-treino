@@ -24,6 +24,11 @@
       "name": "Teclado Mecânico",
       "price": "221",
       "id": "su5ol_m3za4"
+    },
+    {
+      "name": "teste",
+      "price": "123",
+      "id": "eK1tfbCMqE4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

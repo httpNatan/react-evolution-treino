@@ -1,5 +1,6 @@
 
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const CadastrarProduto = () => {
@@ -10,6 +11,8 @@ const CadastrarProduto = () => {
   const[name,setName] = useState('')
   const[price,setPrice] = useState('')
   const[error , setError] = useState('')
+
+  const navigate = useNavigate()
 
   const handleSubmit = async (e)=>{
       e.preventDefault()
@@ -32,15 +35,15 @@ const CadastrarProduto = () => {
                if (!response.ok) {
                      throw new Error("Erro ao buscar dados");
                   }
-       
+                  
+                  setName('')
+                  setPrice('')
+                  navigate('/produtos')
 
               }catch(err){
                 setError(err.message)
           }
       
-      setName('')
-      setPrice('')
-
     }
       
   return (

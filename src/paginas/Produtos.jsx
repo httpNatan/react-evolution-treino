@@ -1,51 +1,15 @@
 
 import {useFetch} from '../hoock/useFetch'
-import { useEffect, useState } from 'react'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
+
 
 const Produtos =() => {
 
   const url = 'http://localhost:3001/products' 
 
-  const {data,setData,loading,setloading,error,setError} = useFetch(url)
-  const[name,setName] = useState('')
-  const[price,setPrice] = useState('')
+  const {data,loading,error} = useFetch(url)
 
-  const handleSubmit = async (e)=>{
-      e.preventDefault()
 
-      let objetoTemporario = {
-         name,
-         price
-      }
-
-         try{
-              let response = await fetch(url,{
-                method:'POST',
-                headers:{
-                  "Content-Type": "application/json"
-               },
-               body:JSON.stringify(objetoTemporario)
-                  
-              })
-              
-               if (!response.ok) {
-                     throw new Error("Erro ao buscar dados");
-                  }
-
-                  let dado = await response.json()
-                  setData([...data,dado])
-       
-
-              }catch(err){
-                setError(err.message)
-          }
-      
-      setName('')
-      setPrice('')
-
-    }
-      
+  
   return (
     <>
       <h1>treinando</h1>
