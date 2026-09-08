@@ -1,7 +1,7 @@
 
 import {useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import BotaoVoltar from '../componentes/BotaoVolta'
 
 const CadastrarProduto = () => {
 
@@ -60,6 +60,7 @@ const CadastrarProduto = () => {
           </label>
           <button>salvar</button>
        </form>
+       <BotaoVoltar/>
       
     </>
   )

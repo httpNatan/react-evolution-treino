@@ -1,6 +1,7 @@
 
+import BotaoVoltar from '../componentes/BotaoVolta'
 import {useFetch} from '../hoock/useFetch'
-
+import { Link } from 'react-router-dom'
 
 const Produtos =() => {
 
@@ -17,9 +18,9 @@ const Produtos =() => {
        {loading && <p>Carregando...</p>}
        {error && <p>erro ao carregar dados</p>}
        {data && data.map((item)=>{
-        return(<p key={item.id}>nome : {item.name} / valor : {item.price}</p>)
+        return(<p key={item.id}>nome : {item.name} / valor : {item.price} <Link to={`/produtos/${item.id}`} >ver</Link> </p>)
        })}
-       
+       <BotaoVoltar/>
     </>
   )
 }
