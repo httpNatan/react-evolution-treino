@@ -18,7 +18,7 @@ const Produtos =() => {
        {loading && <p>Carregando...</p>}
        {error && <p>erro ao carregar dados</p>}
        {data && data.map((item)=>{
-        return(<p key={item.id}>nome : {item.name} / valor : {item.price} <Link to={`/produtos/${item.id}`} >ver</Link> </p>)
+        return(<p key={item.id}>nome : {item.name} / valor : {item.price} <Link to={`/produto/${item.id}`} >ver</Link> </p>)
        })}
        <BotaoVoltar/>
     </>

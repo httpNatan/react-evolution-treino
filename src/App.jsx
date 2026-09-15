@@ -2,6 +2,7 @@ import './index.css'
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import Home from './paginas/Home'
 import Produtos from './paginas/Produtos'
+import Produto from './paginas/Produto'
 import CadastrarProduto from './paginas/CadastrarProduto'
 import NavBar from './componentes/NavBar'
 
@@ -14,6 +15,7 @@ function App() {
           <Routes>
               <Route path='/' element ={<Home/>} />
               <Route path='/produtos' element ={<Produtos/>} />
+              <Route path='/produto/:id' element ={<Produto/>} />
               <Route path='/cadastrarProdutos' element ={<CadastrarProduto/>} />
           </Routes>
       </BrowserRouter>

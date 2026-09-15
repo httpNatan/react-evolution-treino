@@ -5,7 +5,7 @@ const BotaoVoltar = ()=>{
     const navigate = useNavigate()
 
     return(<button onClick={()=>{
-        navigate(-1)
+        navigate('/')
     }}  >voltar</button>)
 }
 
