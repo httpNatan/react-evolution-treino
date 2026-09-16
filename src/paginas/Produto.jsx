@@ -14,15 +14,13 @@ const Produto = ()=>{
   
 
     return (<>
-    <h1>produto id : {id}</h1>
 
         {loading && <p>carregando</p>}
         {error && <p>erro ao carregar dados</p>}
-        {produto && <p>
-            Nome: {produto.name}
-            preco: {produto.price}
-            </p>}
-        
+        {produto && <p> id do produto : {produto.id}</p>}
+        {produto && <h2>Nome: {produto.name}</h2>}
+        {produto && <p>preco: {produto.price}</p>}
+        {!produto &&  !loading && !error && <p>id inexistente</p>}
 
     </>)
 }
